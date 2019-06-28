@@ -162,6 +162,7 @@ public class InAppBrowser extends CordovaPlugin {
         if (action.equals("open")) {
             this.callbackContext = callbackContext;
             final String url = args.getString(0);
+            setUserPass(args.getString(3), args.getString(4)); // modified by Glarius
             String t = args.optString(1);
             if (t == null || t.equals("") || t.equals(NULL)) {
                 t = SELF;

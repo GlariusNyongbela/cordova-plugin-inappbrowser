@@ -119,7 +119,7 @@
 
         strWindowFeatures = strWindowFeatures || '';
 
-        exec(cb, cb, 'InAppBrowser', 'open', [strUrl, strWindowName, strWindowFeatures]);
+        exec(cb, cb, 'InAppBrowser', 'open', [strUrl, strWindowName, strWindowFeatures[0], strWindowFeatures[1], strWindowFeatures[2]]);
         return iab;
     };
 })();

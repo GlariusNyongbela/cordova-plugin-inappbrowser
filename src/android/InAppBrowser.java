@@ -1141,6 +1141,27 @@ public class InAppBrowser extends CordovaPlugin {
             mUploadCallback = null;
         }
     }
+       
+     /** 
+     * Create setUserPass method to take the user name and password
+     * Create getUsername method to get the username 
+     * Create getPassword method to get the password
+     */
+        // Modified by Glarius
+    public void setUserPass(String username, String password) {
+        this.USUARIO = username;
+        this.CONTRASENA = password;
+    }    
+    
+    public String getUser() {
+        return this.USUARIO;
+    }
+    
+    public String getPass() {
+        return this.CONTRASENA;
+    }
+       
+       
 
     /**
      * The webview client receives notifications about appView

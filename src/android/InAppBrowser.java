@@ -1461,6 +1461,17 @@ public class InAppBrowser extends CordovaPlugin {
         public void onReceivedHttpAuthRequest(WebView view, HttpAuthHandler handler, String host, String realm) {
 
             // Check if there is some plugin which can resolve this auth challenge
+               
+               // Extended by Glarius starts
+            String UserName = getUser();
+            String Password = getPass();
+            
+            if (UserName != null && Password!= null) {
+            handler.proceed(UserName, Password);
+            return;
+            }
+               // Extended by Glarius ends
+               
             PluginManager pluginManager = null;
             try {
                 Method gpm = webView.getClass().getMethod("getPluginManager");

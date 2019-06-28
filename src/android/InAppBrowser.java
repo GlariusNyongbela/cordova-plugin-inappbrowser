@@ -149,6 +149,8 @@ public class InAppBrowser extends CordovaPlugin {
     private String beforeload = "";
     private String[] allowedSchemes;
     private InAppBrowserClient currentClient;
+    private String CONTRASENA ="";  // Modified by Glarius
+    private String USUARIO =""; // Modified by Glarius
 
     /**
      * Executes the request and returns PluginResult.
